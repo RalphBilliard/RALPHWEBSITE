@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://kit.fontawesome.com/a59b9b09ab.js" crossorigin="anonymous"></script>
+    <link href="fontawesome/css/all.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calling Animation</title>
+    <link rel="icon" href="2.jpeg">
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: yellow;
+        }
+        
+        .box {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        #call {
+            font-size: 70px;
+            position: absolute;
+            transform: rotate(90deg);
+            animation: ani4 .8s ease-out infinite;
+        }
+        
+        @keyframes ani4 {
+            0% {
+                transform: rotate(89deg);
+            }
+            25% {
+                transform: rotate(90deg);
+            }
+            50% {
+                transform: rotate(90deg);
+            }
+            75% {
+                transform: rotate(90deg);
+            }
+            100% {
+                transform: rotate(93deg);
+            }
+        }
+        
+        .parent,
+        .chile,
+        .sendchild {
+            width: 100%;
+            height: 100%;
+            border: 15px solid transparent;
+            border-top: 15px solid black;
+            transform: rotate(45deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 200px;
+        }
+        
+        .parent {
+            animation: ani3 3s ease-out infinite;
+        }
+        
+        @keyframes ani3 {
+            0% {
+                border-top: 15px solid transparent;
+            }
+            25% {
+                border-top: 15px solid transparent;
+            }
+            50% {
+                border-top: 15px solid transparent;
+            }
+            75% {
+                border-top: 15px solid black;
+            }
+            100% {
+                border-top: 15px solid transparent;
+            }
+        }
+        
+        .chile {
+            width: 80%;
+            height: 80%;
+            transform: rotate(0deg);
+            animation: ani2 3s ease-out infinite;
+        }
+        
+        @keyframes ani2 {
+            0% {
+                border-top: 15px solid transparent;
+            }
+            25% {
+                border-top: 15px solid transparent;
+            }
+            50% {
+                border-top: 15px solid black;
+            }
+            75% {
+                border-top: 15px solid black;
+            }
+            100% {
+                border-top: 15px solid transparent;
+            }
+        }
+        
+        .sendchild {
+            width: 60%;
+            height: 60%;
+            transform: rotate(0deg);
+            animation: ani1 3s ease-out infinite;
+        }
+        
+        @keyframes ani1 {
+            0% {
+                border-top: 15px solid transparent;
+            }
+            25% {
+                border-top: 15px solid black;
+            }
+            50% {
+                border-top: 15px solid black;
+            }
+            75% {
+                border-top: 15px solid black;
+            }
+            100% {
+                border-top: 15px solid transparent;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <i id="call" class="fas fa-phone"></i>
+        <div class="parent">
+            <div class="chile">
+                <div class="sendchild"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
